@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Love Story ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+    --pink: #ffb8d0;
+    --pink-light: #fff0f5;
+    --rose: #e86f9b;
+    --purple: #c9b6ff;
+    --blue: #b8e5ff;
+    --peach: #ffd3b6;
+    --yellow: #fff0a8;
+    --green: #c9edcf;
+    --dark: #634259;
+    --white: #fffdfb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+section {
+    padding: 90px 22px;
+    position: relative;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: var(--rose);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-size: clamp(34px, 6vw, 51px);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto 45px;
+    color: #91778c;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 27px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(110deg, #ff8eb5, #bd9aff);
+    color: white;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-decoration: none;
+    box-shadow: 0 8px 22px #d78bbd40;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 28px #d78bbd55;
+}
+
+.center { text-align: center; }
+
+/* HERO */
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 10% 15%, #ffd0df 0, transparent 38%),
+        radial-gradient(ellipse at 90% 20%, #d7c9ff 0, transparent 35%),
+        radial-gradient(ellipse at 80% 90%, #ffdfc9 0, transparent 38%),
+        radial-gradient(ellipse at 10% 90%, #c9edff 0, transparent 35%),
+        #fffafc;
+}
+
+.hero-content {
+    max-width: 680px;
+    position: relative;
+    z-index: 2;
+    animation: rise 1s ease both;
+}
+
+.hero-heart {
+    display: block;
+    font-size: 58px;
+    margin-bottom: 20px;
+    animation: beat 1.7s infinite;
+}
+
+.hero h1 {
+    font-size: clamp(49px, 10vw, 88px);
+    line-height: 1.05;
+    margin-bottom: 26px;
+    color: #69465d;
+}
+
+.hero h1 em {
+    background: linear-gradient(100deg, #f26c9b, #a68afa, #f3a17d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 440px;
+    margin: 0 auto 30px;
+    font-size: 14px;
+    line-height: 2;
+    color: #94778b;
+}
+
+.hero .eyebrow { color: #bb75a0; }
+
+.scroll-note {
+    position: absolute;
+    bottom: 25px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #a789a1;
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 25px;
+    animation: bob 4s ease-in-out infinite;
+}
+
+.s1 { top: 18%; left: 12%; }
+.s2 { top: 25%; right: 13%; animation-delay: 1s; }
+.s3 { bottom: 20%; left: 16%; animation-delay: 2s; }
+.s4 { bottom: 23%; right: 14%; animation-delay: .5s; }
+
+/* STORY */
+
+.story {
+    background: linear-gradient(150deg, #fff5f7, #fffaf0, #f6f1ff);
+}
+
+.story-card {
+    max-width: 670px;
+    margin: auto;
+    padding: 42px 30px;
+    border-radius: 28px;
+    background: #ffffffd9;
+    border: 2px solid white;
+    box-shadow: 0 18px 55px #bb8da51b;
+    text-align: center;
+    position: relative;
+}
+
+.story-card::before {
+    content: "✿";
+    position: absolute;
+    top: -25px;
+    left: 22px;
+    font-size: 40px;
+    color: #f2a3be;
+}
+
+.story-card h3 {
+    font-size: 32px;
+    margin-bottom: 22px;
+    color: #bc6e98;
+}
+
+.story-card p {
+    font-size: 14px;
+    line-height: 2.1;
+    color: #8d7489;
+}
+
+.story-date {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 9px 16px;
+    border-radius: 30px;
+    background: #ffe4ed;
+    color: #b76d91;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* MEMORIES */
+
+.memories {
+    background: linear-gradient(135deg, #ffe2ed, #e8e1ff 50%, #dff3ff);
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 27px;
+    align-items: start;
+}
+
+.memory-card {
+    padding: 13px 13px 23px;
+    background: white;
+    border-radius: 8px 8px 20px 20px;
+    box-shadow: 0 14px 32px #7b5c8a18;
+    transition: transform .3s, box-shadow .3s;
+    overflow: hidden;
+}
+
+.memory-card:nth-child(4n+1) { transform: rotate(-2deg); }
+.memory-card:nth-child(4n+2) { transform: rotate(2deg); margin-top: 30px; }
+.memory-card:nth-child(4n+3) { transform: rotate(1.5deg); }
+.memory-card:nth-child(4n) { transform: rotate(-1.5deg); margin-top: 25px; }
+
+.memory-card:hover {
+    transform: rotate(0) translateY(-6px);
+    box-shadow: 0 18px 40px #7b5c8a28;
+}
+
+.memory-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 4.4;
+    object-fit: cover;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ffd8e7, #ded4ff, #d4efff);
+}
+
+.memory-card h3 {
+    text-align: center;
+    font-size: 22px;
+    margin: 19px 4px 9px;
+    color: #98628d;
+}
+
+.memory-card p {
+    text-align: center;
+    color: #987f97;
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 0 5px;
+}
+
+.photo-tip {
+    text-align: center;
+    color: #866b8a;
+    font-size: 12px;
+    margin-top: 40px;
+    line-height: 1.9;
+}
+
+/* LOVE REASONS */
+
+.reasons {
+    background:
+        radial-gradient(ellipse at top left, #ffe6ef, transparent 50%),
+        radial-gradient(ellipse at bottom right, #e9e0ff, transparent 50%),
+        #fffdfb;
+}
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.reason {
+    padding: 28px 17px;
+    min-height: 190px;
+    border: 2px solid white;
+    border-radius: 23px;
+    text-align: center;
+    box-shadow: 0 10px 28px #96718c12;
+    transition: .3s;
+}
+
+.reason:nth-child(4n+1) { background: #ffe4ed; }
+.reason:nth-child(4n+2) { background: #e9e1ff; }
+.reason:nth-child(4n+3) { background: #dff3ff; }
+.reason:nth-child(4n) { background: #fff0cb; }
+
+.reason:hover { transform: translateY(-6px); }
+
+.reason .icon {
+    font-size: 32px;
+    margin-bottom: 13px;
+}
+
+.reason h3 {
+    font-size: 21px;
+    margin-bottom: 11px;
+}
+
+.reason p {
+    font-size: 12px;
+    line-height: 1.9;
+    color: #806b83;
+}
+
+/* DISTANCE */
+
+.distance {
+    text-align: center;
+    background: linear-gradient(135deg, #e3e3ff, #ffe4f0, #ffeadb);
+}
+
+.distance-box {
+    max-width: 660px;
+    margin: auto;
+    padding: 38px 28px;
+    border: 2px solid #ffffffc9;
+    border-radius: 30px;
+    background: #ffffff8c;
+}
+
+.moon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.distance-box h2 {
+    font-size: clamp(35px, 6vw, 49px);
+    margin-bottom: 26px;
+}
+
+.distance-box p {
+    color: #8a708a;
+    font-size: 14px;
+    line-height: 2.1;
+}
+
+.distance-box strong { color: #bc719d; }
+
+/* LETTER */
+
+.letter {
+    background: linear-gradient(145deg, #fff7e8, #ffe6f0, #f0e9ff);
+}
+
+.envelope {
+    max-width: 640px;
+    margin: auto;
+    padding: 40px 28px;
+    background: #fffdfb;
+    border: 3px solid white;
+    border-radius: 25px;
+    box-shadow: 0 18px 50px #9d7b9c1c;
+    text-align: center;
+}
+
+.envelope-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: bob 3s ease-in-out infinite;
+}
+
+.envelope h2 {
+    font-size: clamp(29px, 5vw, 38px);
+    margin-bottom: 15px;
+    color: #b66d96;
+}
+
+.envelope > p {
+    color: #987d92;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.letter-content {
+    display: none;
+    text-align: left;
+    border-top: 2px dashed #efc9db;
+    margin-top: 28px;
+    padding-top: 26px;
+}
+
+.letter-content.show {
+    display: block;
+    animation: rise .7s ease both;
+}
+
+.letter-content p {
+    font-size: 14px;
+    line-height: 2.1;
+    margin-bottom: 17px;
+    color: #876d83;
+}
+
+/* FINAL */
+
+.final {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at top left, #ffd5e5, transparent 45%),
+        radial-gradient(ellipse at top right, #d9d0ff, transparent 45%),
+        radial-gradient(ellipse at bottom, #ffe1c9, transparent 50%),
+        #fffafc;
+}
+
+.final-content {
+    max-width: 650px;
+}
+
+.final h2 {
+    font-size: clamp(39px, 8vw, 64px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #80516f;
+}
+
+.final p {
+    font-size: 14px;
+    line-height: 2.1;
+    color: #92778b;
+    margin-bottom: 27px;
+}
+
+.final-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-alt {
+    background: white;
+    color: #bd729d;
+    border: 2px solid #f6d1e0;
+    box-shadow: 0 8px 22px #d78bbd18;
+}
+
+.final-message {
+    display: none;
+    margin-top: 30px;
+    padding: 30px 23px;
+    background: #ffffffdf;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px #9875a51a;
+    color: #8b6d86;
+    font-size: 14px;
+    line-height: 2.1;
+}
+
+.final-message.show {
+    display: block;
+    animation: rise .7s ease both;
+}
+
+.final-message h3 {
+    font-size: 32px;
+    color: #d66f9c;
+    margin-bottom: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 28px 15px;
+    background: linear-gradient(90deg, #ffd8e7, #e4dcff, #d9f0ff);
+    color: #8d6988;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -35px;
+    z-index: 20;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    opacity: 0;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    15% { opacity: .7; }
+    100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.13); }
+}
+
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+@keyframes rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* SCROLL ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 650px) {
+    section { padding: 72px 18px; }
+
+    .memory-grid { gap: 17px; }
+
+    .memory-card { padding: 9px 9px 17px; }
+
+    .memory-card h3 { font-size: 18px; }
+
+    .memory-card p { font-size: 11px; }
+
+    .reason-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .reason { padding: 23px 12px; min-height: 180px; }
+
+    .story-card, .distance-box, .envelope { padding: 30px 20px; }
+}
+
+@media (max-width: 380px) {
+    .memory-grid { grid-template-columns: 1fr; }
+
+    .memory-card:nth-child(n) {
+        margin-top: 0;
+        transform: none;
+    }
+
+    .reason-grid { grid-template-columns: 1fr; }
+
+    .reason { min-height: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <span class="sparkle s1">✿</span>
+    <span class="sparkle s2">♡</span>
+    <span class="sparkle s3">✧</span>
+    <span class="sparkle s4">🌷</span>
+
+    <div class="hero-content">
+        <span class="hero-heart">💗</span>
+        <p class="eyebrow">SUPRISE FOR MY BABY SAYANG</p>
+
+        <h1>Our Little<br><em>Love Story</em></h1>
+
+        <p>
+            A story between Atiqah Hana & Aidil Ilham 
+            <br>
+            This is just for you, my sayang. ♡
+        </p>
+
+        <a href="#beginning" class="btn">START SINII ♡</a>
+    </div>
+
+    <div class="scroll-note">SCROLL DOWN FOR OUR MEMORIES ↓</div>
+</section>
+
+
+<!-- CHAPTER 1 -->
+<section class="story" id="beginning">
+    <div class="container reveal center">
+        <p class="eyebrow">Chapter 01 · The Beginning</p>
+        <h2 class="section-title">And Then, There Was You ♡</h2>
+
+        <p class="section-desc">
+            Of all the people in this world,
+            I'm grateful that our paths crossed.
+        </p>
+
+        <div class="story-card">
+            <h3>Our story started somewhere...</h3>
+
+            <p>
+                I never knew how much someone could mean to me
+                until you became part of my life.
+                Somehow, the little conversations, the laughs,
+                and the moments we shared became memories
+                I hold close to my heart.
+                <br><br>
+                You became someone I look forward to talking to,
+                someone I miss when we're apart,
+                and someone who makes ordinary days feel special.
+                <br><br>
+                If I could go back and experience the beginning
+                of our story again, I'd be happy to find you
+                all over again. 💗
+            </p>
+
+            <span class="story-date">THE START OF SOMETHING BEAUTIFUL ✿</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- CHAPTER 2: TEN PHOTOS -->
+<section class="memories" id="memories">
+    <div class="container reveal">
+        <p class="eyebrow center">Chapter 02 · Our Memories</p>
+
+        <h2 class="section-title">Berdua, Satu Hati</h2>
+
+        <p class="section-desc">
+            I Love You So Much Baby 📸
+        </p>
+
+        <div class="memory-grid">
+
+            <div class="memory-card">
+                <img src="images/memory1.jpg" alt="Our memory 1" loading="lazy">
+                <h3>Our Beginning 🌷</h3>
+                <p>First date, happy + malu + rindu</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory2.jpg" alt="Our memory 2" loading="lazy">
+                <h3>Just You & Me 💕</h3>
+                <p>Muka kita yang goofy lepas pekena Fish&Chip.</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory3.jpg" alt="Our memory 3" loading="lazy">
+                <h3>Our First Valentine 🦋</h3>
+                <p>Pasar Seni, taknak datang dah sebab panasss</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory4.jpg" alt="Our memory 4" loading="lazy">
+                <h3>My Favourite Smile 🌸</h3>
+                <p>Senyuman yang i takkan jemu.</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory5.jpg" alt="Our memory 5" loading="lazy">
+                <h3>Absolute Thai w love</h3> ☀️</h3>
+                <p>Moment bfr ldr.</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory6.jpg" alt="Our memory 6" loading="lazy">
+                <h3>PALING COMEL</h3>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory7.jpg" alt="Our memory 7" loading="lazy">
+                <h3>I love u to the moon and back sayangku 💗</h3>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory8.jpg" alt="Our memory 8" loading="lazy">
+                <h3>My Safe Place 🫂</h3>
+                <p></p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory9.jpg" alt="Our memory 9" loading="lazy">
+                <h3>Sukiya date after talking it abt it such a long time hehehe✨</h3>
+                <p></p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/memory10.jpg" alt="Our memory 10" loading="lazy">
+                <h3>To Be Continued... 💌</h3>
+                <p>LESGOO YEAR 3 !!!</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CHAPTER 3 -->
+<section class="reasons">
+    <div class="container reveal">
+        <p class="eyebrow center">Chapter 03 · Little Things</p>
+
+        <h2 class="section-title">Things I Love About You</h2>
+
+        <p class="section-desc">
+            It's not just one big thing.
+            It's a thousand little things that make you, you.
+        </p>
+
+        <div class="reason-grid">
+            <div class="reason">
+                <div class="icon">😊</div>
+                <h3>Your Smile</h3>
+            </div>
+
+            <div class="reason">
+                <div class="icon">🌷</div>
+                <h3>Baik sangat</h3>
+            </div>
+
+            <div class="reason">
+                <div class="icon">🫂</div>
+                <h3>Hugs hihi</h3>
+            </div>
+
+            <div class="reason">
+                <div class="icon">💗</div>
+                <h3>Pretty and beautiful</h3>
+            </div>
+
+            <div class="reason">
+                <div class="icon">💗</div>
+                <h3>Your Love</h3>
+                <p>Thank you sebab always buat i feel the loved and appreciated.</p>
+            </div>
+
+            <div class="reason">
+                <div class="icon">✨</div>
+                <h3>Simply You</h3>
+                <p>I don't need you to be perfect. I'm happy to have you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CHAPTER 4 -->
+<section class="distance">
+    <div class="distance-box reveal">
+        <div class="moon">🌙💗</div>
+
+        <p class="eyebrow">Chapter 04 · LDR STARTS</p>
+
+
+
+        <p>
+            PENANG - MELAKA 
+            <br><br>
+            Dari utara ke selatan, i wish i ada dengan you untuk every moment, be your classmates, be your housemates 
+            or apa apa laa janji ada dengan baby always. I tau ldr ni struggle sikit but i tau we both 
+            can go through each of this together. Rindulaa baby kat u tau hmm.
+            
+            No matter jauhnya kita sekali pun sayang,
+            I will be always be with you sayang.
+            <br><br>
+            <strong>You're worth every mile, sayang. ♡</strong>
+        </p>
+    </div>
+</section>
+
+<!-- FINAL SURPRISE -->
+<section class="final">
+    <div class="final-content reveal">
+        <p class="eyebrow">One last thing, baby...</p>
+
+        <h2>You're My Favourite Part of This Story. ♡</h2>
+
+        <p>
+            <strong>So excited untuk create memories lagi banyakkk. Jom sayangku are you willing to keep building our beautiful love story together sayang ?</strong>
+        </p>
+
+        <div class="final-buttons">
+            <button class="btn" onclick="showFinalMessage()">
+                ALWAYS WITH YOU ❤️
+            </button>
+
+            <button class="btn btn-alt" onclick="showFinalMessage()">
+                OF COURSE, BABY ♡
+            </button>
+        </div>
+
+        <div class="final-message" id="finalMessage">
+            <h3>YEAYY I LOVE YOUUU 💗</h3>
+
+            Thank you for everything bby.
+            <br>
+            I buat ni 2 hari jee bby sorry lambat sayang.
+            <br><br>
+            Happy Birthday again, love you lotsss.
+            <br>
+            Sampai sini je website i untuk you sayang, see you in another yearrr zzzz
+            <br><br>
+            I love you, today and always atiqah hana. ♡
+            <br><br>
+            🌷 💗 🦋 💕 ✨
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    MADE WITH LOVE, JUST FOR YOU ♡
+</footer>
+
+
+<script>
+// Floating hearts in different colours
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+
+    const hearts = ["♡", "♥", "💕", "💗", "✿", "✨"];
+    const colours = [
+        "#f28bb2", "#bd9aff", "#ffad8d",
+        "#92cfee", "#ed91c0"
+    ];
+
+    heart.textContent = hearts[
+        Math.floor(Math.random() * hearts.length)
+    ];
+
+    heart.style.color = colours[
+        Math.floor(Math.random() * colours.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (13 + Math.random() * 19) + "px";
+    heart.style.animationDuration = (7 + Math.random() * 6) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 14000);
+}
+
+setInterval(createHeart, 900);
+
+
+// Reveal sections while scrolling
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+
+
+// Open or close birthday letter
+function toggleLetter() {
+    const letter = document.getElementById("letterContent");
+    const button = document.getElementById("openLetter");
+
+    letter.classList.toggle("show");
+
+    if (letter.classList.contains("show")) {
+        button.textContent = "CLOSE MY LETTER ♡";
+    } else {
+        button.textContent = "OPEN MY LETTER ♡";
+    }
+}
+
+
+// Final surprise and extra hearts
+function showFinalMessage() {
+    const message = document.getElementById("finalMessage");
+
+    message.classList.add("show");
+
+    for (let i = 0; i < 24; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+</script>
+
+</body>
+</html>
+```
